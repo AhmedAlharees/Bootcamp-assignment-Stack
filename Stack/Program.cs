@@ -1,8 +1,5 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Reflection.Metadata;
-
-
+using System.Linq;
 
 /*
  * Stack is a type of data structure that uses LIFO(last in first out)
@@ -171,6 +168,7 @@ namespace Recursion {
         }
 
 
+        // Return the element of position nth
         public int GetNthElement(int index) {
 
             // check if index is out of range, return -1 
@@ -185,15 +183,73 @@ namespace Recursion {
 
         }
 
+        // Count a specific element from the stack
+        public int CountElement(int  element) {
+            if (IsEmpty()) return 0;
+
+            int counter = 0;
+
+            foreach (int value in stackList) {
+                if (value == element) counter++;
+            }
+
+            return counter;
+        }
+
+        // Remove Duplicate from the stack
+        // create temporary array with the same length of stack
+        // create temporary counter
+        // loop over all the elements in the stack
+        // use the contains method to check if the element
+        // ...exist in the tempArr or not
+        // if not added it to the array
+        public void RemoveDuplicates() {
+            int[] tempArr = new int[stackList.Length];
+            int tempElementCounter = 0;
+
+            foreach (int value in stackList) {
+                if (!tempArr.Contains(value)) {
+                    tempArr[tempElementCounter++] = value;
+                }
+            }
+
+            // point the stack list & counter to the temp array
+            stackList = tempArr;
+            stackElementsCounter = tempElementCounter;
+        }
+        
+
+        // Merge two lists into one list
+        public static int[] MergeTwoLists(Stack firstStack, Stack secondStack) {
+            // create new array with the sum of elements from both lists
+            int[] tempArr = new int[firstStack.stackElementsCounter + secondStack.stackElementsCounter];
+            int elementsCounter = 0;
+
+            // first loop takes the elements of the first stack
+            for (int i = 0; i < firstStack.stackElementsCounter; i++) {
+                tempArr[elementsCounter++] = firstStack.stackList[i];
+            }
+
+            // second loop takes the elements from the second stack
+            for (int i = 0; i < secondStack.stackElementsCounter; i++) {
+                tempArr[elementsCounter++] = secondStack.stackList[i];
+            }
+
+            
+            return tempArr;
+        } 
+
+
+
 
         
         public static void Main(string[] args) {
             Stack stack1 = new Stack();
             Stack stack2 = new Stack();
             stack1.Push(3);
-            stack1.Push(2);
+            stack1.Push(1);
             stack1.Push(4);
-            stack1.Push(0);
+            stack1.Push(4);
             stack1.Push(1);
 
             stack2.Push(20);
@@ -201,10 +257,12 @@ namespace Recursion {
             stack2.Push(90);
             stack2.Push(50);
 
-            stack1.TopAndBottom(out int x, out int y);
-            Console.WriteLine($"{x} {y}");
+            int[] arr = MergeTwoLists(stack1, stack2);
 
+            foreach (int i in arr) {
+                Console.WriteLine(i);
 
+            }
 
 
         }

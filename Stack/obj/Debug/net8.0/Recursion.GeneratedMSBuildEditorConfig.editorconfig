@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Recursion
-build_property.ProjectDir = C:\Users\User\source\repos\Recursion\Recursion\
+build_property.ProjectDir = D:\BootCamp\DSA\Stack\Stack\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

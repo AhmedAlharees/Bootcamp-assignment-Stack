@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Recursion\\Recursion\\Recursion.csproj": {}
+    "D:\\BootCamp\\DSA\\Stack\\Stack\\Recursion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Recursion\\Recursion\\Recursion.csproj": {
+    "D:\\BootCamp\\DSA\\Stack\\Stack\\Recursion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Recursion\\Recursion\\Recursion.csproj",
+        "projectUniqueName": "D:\\BootCamp\\DSA\\Stack\\Stack\\Recursion.csproj",
         "projectName": "Recursion",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Recursion\\Recursion\\Recursion.csproj",
+        "projectPath": "D:\\BootCamp\\DSA\\Stack\\Stack\\Recursion.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Recursion\\Recursion\\obj\\",
+        "outputPath": "D:\\BootCamp\\DSA\\Stack\\Stack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
